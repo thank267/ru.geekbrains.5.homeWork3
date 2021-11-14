@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все продукты</title>
+</head>
+<body>
+<h1>Все продукты</h1>
+<div th:each="product : ${products}">
+    <a th:href="@{/products/{id}(id=${product.id})}" th:text="'Наименование: '+ ${product.title +', стоимость: '+ product.cost}">product</a>
+</div>
+
+<br/>
+<hr/>
+
+
+</body>
+</html>
